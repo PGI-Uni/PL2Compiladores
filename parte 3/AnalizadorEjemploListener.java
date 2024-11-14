@@ -17,7 +17,7 @@ public class AnalizadorEjemploListener extends EjemploParserBaseListener {
 
     @Override
     public void exitProg(EjemploParser.ProgContext ctx) {
-        System.out.println("\nTabla de símbolos:");
+        System.out.println("\n\n\nTabla de simbolos:");
         for (Map.Entry<String, List<String>> entry : symbolTable.entrySet()) {
             String varName = entry.getKey();
             for (String value : entry.getValue()) {
