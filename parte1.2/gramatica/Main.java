@@ -37,6 +37,16 @@ public class Main {
         //Mostrar arbol en consola
         System.out.print(arbol.toStringTree(parser));
 
+    //Recorrer el árbol
+        //Iniciar un recorredor
+        ParseTreeWalker recorredor = new ParseTreeWalker();
+
+        //Iniciar un escuchador
+        Escuchador escuchador = new Escuchador();
+
+        //Conectar recorredor y escuchador para recorrer el arbol
+        recorredor.walk(escuchador, arbol);
+        
 /*
         // Leer el archivo de entrada
         CharStream input = CharStreams.fromFileName("mapa.field");
@@ -57,7 +67,6 @@ public class Main {
 
         // Imprimir el AST en formato de texto plano
         System.out.println(listener.getAstRepresentation());
-    
     */
     }
 }

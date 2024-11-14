@@ -2,8 +2,7 @@ parser grammar MapaParser;
 
 options { tokenVocab = MapaLexer; }
 
-mapa : MAPA* barcoInfo* criaturaInfo*posicionInfo* peligroInfo*   EOF ;
-
+mapa : MAPA* barcoInfo* criaturaInfo* posicionInfo* peligroInfo* EOF;
 
 
 barcoInfo : NOMBRE_BARCO TE_DA NUMERO PUNTOS ;

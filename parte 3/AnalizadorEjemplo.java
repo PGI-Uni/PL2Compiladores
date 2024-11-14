@@ -7,6 +7,7 @@ import java.io.InputStream;
 public class AnalizadorEjemplo {
 
     public static void main(String[] args) throws Exception {
+        //Conexion de datos
         String inputFile = null;
         if (args.length > 0) inputFile = args[0];
 
@@ -15,19 +16,18 @@ public class AnalizadorEjemplo {
 
         CharStream input = CharStreams.fromStream(is);
 
+        //Lexer y Parser
         EjemploLexer lexer = new EjemploLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
-
         EjemploParser parser = new EjemploParser(tokens);
-
         ParseTree tree = parser.prog();  // Parsear el programa
 
-        // Usamos el walker para recorrer el árbol
+        //Usamos el walker y listener para recorrer el árbol
         ParseTreeWalker walker = new ParseTreeWalker();
         AnalizadorEjemploListener escuchador = new AnalizadorEjemploListener();
-        walker.walk(escuchador, tree);  // Ejecutamos el listener
+        walker.walk(escuchador, tree);  //Ejecutamos el listener
 
-        // Imprimir el árbol de manera legible
+        //Imprimir el árbol de manera legible
         System.out.println(prettyPrint(tree, parser));
     }
 
