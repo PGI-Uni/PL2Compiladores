@@ -4,3 +4,13 @@
 *.tokens
 
 *.interp
+
+//Ignorar archivos del .antlr que son automaticos
+parte1.2/gramatica/.antlr/MapaLexer.java
+parte1.2/gramatica/.antlr/MapaParser.java
+
+//Ignorar archivos que generamos con los .g4
+parte1.2/gramatica/MapaLexer.java
+parte1.2/gramatica/MapaParser.java
+parte1.2/gramatica/MapaParserBaseListener.java
+parte1.2/gramatica/MapaParserListener.java
