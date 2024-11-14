@@ -9,8 +9,18 @@
 parte1.2/gramatica/.antlr/MapaLexer.java
 parte1.2/gramatica/.antlr/MapaParser.java
 
+parte 3/.antlr/EjemploLexer.java
+parte 3/.antlr/EjemploParser.java
+parte 3/.antlr/EjemploParserBaseListener.java
+parte 3/.antlr/EjemploParserListener.java
+
 //Ignorar archivos que generamos con los .g4
 parte1.2/gramatica/MapaLexer.java
 parte1.2/gramatica/MapaParser.java
 parte1.2/gramatica/MapaParserBaseListener.java
 parte1.2/gramatica/MapaParserListener.java
+
+parte 3/EjemploLexer.java
+parte 3/EjemploParser.java
+parte 3/EjemploParserBaseListener.java
+parte 3/EjemploParserListener.java
