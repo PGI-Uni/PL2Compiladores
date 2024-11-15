@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class AnalizadorEjemploListener extends EjemploParserBaseListener {
+public class Escuchador extends EjemploParserBaseListener {
 
     private Map<String, List<String>> symbolTable = new HashMap<>();
 
@@ -17,7 +17,7 @@ public class AnalizadorEjemploListener extends EjemploParserBaseListener {
 
     @Override
     public void exitProg(EjemploParser.ProgContext ctx) {
-        System.out.println("\n\n\nTabla de simbolos:");
+        System.out.println("\n\n\nArbol:");
         for (Map.Entry<String, List<String>> entry : symbolTable.entrySet()) {
             String varName = entry.getKey();
             for (String value : entry.getValue()) {

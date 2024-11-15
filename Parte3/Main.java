@@ -4,7 +4,7 @@ import org.antlr.v4.runtime.tree.*;
 import java.io.FileInputStream;
 import java.io.InputStream;
 
-public class AnalizadorEjemplo {
+public class Main {
 
     public static void main(String[] args) throws Exception {
         //Conexion de datos
@@ -24,7 +24,7 @@ public class AnalizadorEjemplo {
 
         //Usamos el walker y listener para recorrer el árbol
         ParseTreeWalker walker = new ParseTreeWalker();
-        AnalizadorEjemploListener escuchador = new AnalizadorEjemploListener();
+        Escuchador escuchador = new Escuchador();
         walker.walk(escuchador, tree);  //Ejecutamos el listener
 
         //Imprimir el árbol de manera legible

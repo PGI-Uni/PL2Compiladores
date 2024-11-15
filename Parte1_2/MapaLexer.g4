@@ -4,7 +4,7 @@ lexer grammar MapaLexer;
 MAPA         : '"Mapa de pruebas"';
 TE_DA        : 'te da';
 TE_QUITA     : 'te quita';
-ENTERRADO_EN : 'esta enterrado en';
+ENTERRADO_EN : 'esta enterrado en' | 'está enterrado en';
 OCULTO       : 'esta oculto en';
 PUNTOS       : 'puntos';
 COMA         : ',' ;
